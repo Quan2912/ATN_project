@@ -90,29 +90,28 @@
 		<div class="row">            
 			<?php
 			$connect = mysqli_connect('3.132.234.157','quan','123@123a','quanvh');
-			$sql = "SELECT * FROM song";
+			$sql = "SELECT * FROM toy";
 			$result = mysqli_query($connect, $sql);
-			while ($row_song = mysqli_fetch_array($result))
+			while ($row_toy = mysqli_fetch_array($result))
 			{
-				$song_id=$row_song['song_id'];
-				$song_name=$row_song['song_name'];
-				$song_description=$row_song['song_description'];
-				$song_price=$row_song['song_price'];
-				$song_audio=$row_song['song_audio'];
-				$song_img=$row_song['song_img'];
-				$genre_id=$row_song['song_id'];
-				$singer_id=$row_song['singer_id'];
+				$toy_id=$row_toy['toy_id'];
+				$toy_name=$row_toy['toy_name'];
+				$toy_price=$row_toy['toy_price'];
+				// $song_audio=$row_song['song_audio'];
+				// $song_img=$row_song['song_img'];
+				// $genre_id=$row_song['song_id'];
+				// $singer_id=$row_song['singer_id'];
 				?>
 
 				<div class="col-md-3 col-sm-6 col-12">
 					<ul >
 						<div class="song-group">
 							<div class="card card-product mb-3">
-								<img class="card-img-top" src="img/<?php echo"$song_img"?>" style = "height: 200px; width: 250px; margin-top: 100px">
+								<!-- <img class="card-img-top" src="img/<?php echo"$song_img"?>" style = "height: 200px; width: 250px; margin-top: 100px"> -->
 								<div class="card-body"></div>
-								<h5 style="color: white" class="card-title"><?php echo"$song_name"?></h5>
-								<h5 style="color: white" class="card-title"><?php echo"$song_id"?></h5>
-								<audio controls controlsList="nodownload" ontimeupdate="myAudio(this)" style="width: 250px;">
+								<h5 style="color: white" class="card-title"><?php echo"$toy_name"?></h5>
+								<h5 style="color: white" class="card-title"><?php echo"$toy_id"?></h5>
+								<!-- <audio controls controlsList="nodownload" ontimeupdate="myAudio(this)" style="width: 250px;">
 									<source src="audio/<?php echo $song_audio?>" type="audio/mpeg">
 									</audio>
 									<script type="text/javascript">
@@ -123,9 +122,9 @@
 												alert("You have to pay to listen to the whole song")
 											}
 										}
-									</script>
+									</script> -->
 									<?php
-                       echo"<a href='detail.php?id=$song_id' class='btn btn-primary'>Details</a>"?>
+                       echo"<a href='detail.php?id=$toy_id' class='btn btn-primary'>Details</a>"?>
 
 								</div>
 							</div>
