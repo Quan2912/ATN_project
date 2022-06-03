@@ -42,7 +42,7 @@
 				</tr>
 			</table>
 			<?php
-			$connect = mysqli_connect('localhost','root','','mydb');
+			$connect = mysqli_connect('3.132.234.157','quan','123@123a','quanvh');
 			if($connect){
 				echo "";
 			}

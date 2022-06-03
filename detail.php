@@ -33,7 +33,7 @@
 	<div class="row">
 		<?php
 		session_start();
-		$connect = mysqli_connect('localhost', 'root', '', 'mydb');
+		$connect = mysqli_connect('3.132.234.157', 'quan', '123@123a', 'quanvh');
 		$id = $_GET["id"];
 		$sql = "SELECT * FROM song,singer,genre WHERE song.genre_id = genre.genre_id and song.singer_id = singer.singer_id and song_id = {$id}";
 		$result = mysqli_query($connect, $sql);
